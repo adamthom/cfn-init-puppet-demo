@@ -1,0 +1,17 @@
+<?php
+define('DB_NAME', '<%= cfn_database %>');
+define('DB_USER', '<%= cfn_user %>');
+define('DB_PASSWORD', '<%= cfn_password %>');
+define('DB_HOST', '<%= cfn_host %>');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define('AUTH_KEY', '<%= chars=((40..126).map{ |c| c.chr });a=[];64.times { a << chars[rand(chars.size)] }; a.join %>');
+define('SECURE_AUTH_KEY', '<%= chars=((40..126).map{ |c| c.chr });a=[];64.times { a << chars[rand(chars.size)] }; a.join %>');
+define('LOGGED_IN_KEY', '<%= chars=((40..126).map{ |c| c.chr });a=[];64.times { a << chars[rand(chars.size)] }; a.join %>');
+define('NONCE_KEY', '<%= chars=((40..126).map{ |c| c.chr });a=[];64.times { a << chars[rand(chars.size)] }; a.join %>');
+$table_prefix  = 'wp_';
+define('WPLANG', '');
+define('WP_DEBUG', false);
+if ( !defined('ABSPATH') )
+    define('ABSPATH', dirname(__FILE__) . '/');
+    require_once(ABSPATH . 'wp-settings.php');
